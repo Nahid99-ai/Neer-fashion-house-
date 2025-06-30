@@ -112,5 +112,90 @@
   <footer>
     <p>&copy; 2025 Neer Fashion House. সর্বস্বত্ব সংরক্ষিত।</p>
   </footer>
-</body>
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neer Fashion House</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .bio {
+      text-align: center;
+      margin-top: 10px;
+      color: #555;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+    .product {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin: 10px;
+      padding: 10px;
+      width: 200px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .product h3 {
+      margin: 10px 0 5px 0;
+      font-size: 18px;
+    }
+    .product p {
+      margin: 0;
+      color: #333;
+    }
+    footer {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Neer Fashion House</h1>
+    <div class="bio">Buy only from here</div>
+  </header>  <div class="products">
+    <!-- 50 products will be inserted below --><!-- Example Product (repeat 50 times with random prices)-->
+<!-- Use placeholders for now -->
+
+  </div>  <footer>
+    <p>Contact: 017XXXXXXXX</p>
+    <p>Address: House #12, Road #7, Dhanmondi, Dhaka</p>
+  </footer>  <script>
+    const prices = [3500, 4000, 4500, 5000, 3800, 3000, 3700, 4900, 4200, 4600];
+    const productsContainer = document.querySelector('.products');
+
+    for (let i = 1; i <= 50; i++) {
+      const price = prices[Math.floor(Math.random() * prices.length)];
+      const product = document.createElement('div');
+      product.className = 'product';
+      product.innerHTML = `
+        <img src="https://via.placeholder.com/200x200?text=Product+${i}" alt="Product ${i}" />
+        <h3>Product ${i}</h3>
+        <p>Price: ৳${price}</p>
+      `;
+      productsContainer.appendChild(product);
+    }
+  </script></body>
 </html>
